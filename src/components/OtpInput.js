@@ -180,11 +180,28 @@ class OtpInput extends Component {
     this.focusInput(activeInput - 1);
   };
 
+  // Check next input value null or not
+  isNextInputNull = (value) => {
+    const { activeInput } = this.state;
+    const otp = this.getOtpValue();
+    if(otp[activeInput+1] === " " && otp[activeInput+1] !== undefined) {
+      if(value !== " " && otp[activeInput] !== " ") {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+
   // Change OTP value at focused input
   changeCodeAtFocus = (value) => {
     const { activeInput } = this.state;
     const otp = this.getOtpValue();
-    otp[activeInput] = value[0];
+    if(this.isNextInputNull(value)) {
+      otp[activeInput+1] = value[0];
+    } else {
+      otp[activeInput] = value[0];
+    }
 
     this.handleOtpChange(otp);
   };
