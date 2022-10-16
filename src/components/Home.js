@@ -11,12 +11,12 @@ const SMS = () => {
 }
 
 const Home = () => {
-    const [otp, setOtp] = useState(0);    
+  const [otp, setOtp] = useState(0);    
 
-    const handleChange = (value) => {
-        setOtp(value);
-        console.log("OTP Value >>>>>> "+value);        
-    };
+  const handleChange = (value) => {
+      setOtp(value);
+      console.log("OTP Value >>>>>> "+value);        
+  };
 
   return (
     <div>
