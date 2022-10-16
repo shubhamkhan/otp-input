@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import OtpInput from './OtpInput';
+import { Link } from 'react-router-dom';
 
 const SMS = () => {
   return(
     <div>
       <strong>Send an SMS that includes</strong><br/>
-      <code><small>@otpinput.netlify.app #123456</small></code>
+      <code><small>@otpinput.netlify.app #123456</small></code><br/>
+      <Link to="/user/profile"><small>Test on other link</small></Link>
     </div>
   )
 }
