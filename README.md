@@ -38,6 +38,7 @@ npm start
 **Note** :- You need to have node.js installed on your local machine to run this app locally.
 
 # Screenshot
+![OTP Input](Otp-input.png)
 
 # License
 
